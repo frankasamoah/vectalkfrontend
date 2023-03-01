@@ -24,7 +24,7 @@ const ActualChat = ({ fetchAgain, setFetchAgain }) => {
   const [typing, setTyping] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
 
-  const ENDPOINT = process.env.REACT_APP_ENDPOINT;
+  const ENDPOINT = "https://vectalkbackend.onrender.com";
 
   const socket = useRef();
   //  let chosenChatMatch;
@@ -46,7 +46,7 @@ const ActualChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/message/${chosenChat._id}`,
+        `https://vectalkbackend.onrender.com/api/v1/message/${chosenChat._id}`,
         config
       );
       // console.log(data);
@@ -82,7 +82,7 @@ const ActualChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          `${process.env.REACT_APP_BASE_URL}/message`,
+          `https://vectalkbackend.onrender.com/api/v1/message`,
           {
             content: newMessage,
             chatId: chosenChat,

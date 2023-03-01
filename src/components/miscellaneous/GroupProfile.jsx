@@ -57,7 +57,7 @@ export default function GroupProfile({
         },
       };
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/user?search=${search}`,
+        `https://vectalkbackend.onrender.com/api/v1/user?search=${search}`,
         config
       );
       // console.log(data);
@@ -81,7 +81,7 @@ export default function GroupProfile({
         },
       };
       const { data } = await axios.put(
-        `${process.env.REACT_APP_BASE_URL}/chat/rename`,
+        `https://vectalkbackend.onrender.com/api/v1/chat/rename`,
         {
           chatId: chosenChat._id,
           chatName: groupChatName,
@@ -118,7 +118,7 @@ export default function GroupProfile({
         },
       };
       const { data } = await axios.put(
-        `${process.env.REACT_APP_BASE_URL}/chat/addgroup`,
+        `https://vectalkbackend.onrender.com/api/v1/chat/addgroup`,
         {
           chatId: chosenChat._id,
           userId: user1._id,
@@ -150,7 +150,7 @@ export default function GroupProfile({
         },
       };
       const { data } = await axios.put(
-        `${process.env.REACT_APP_BASE_URL}/chat/removegroup`,
+        `https://vectalkbackend.onrender.com/api/v1/chat/removegroup`,
         {
           chatId: chosenChat._id,
           userId: user1._id,

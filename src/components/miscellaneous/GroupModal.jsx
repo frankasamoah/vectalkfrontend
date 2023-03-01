@@ -51,7 +51,7 @@ const GroupModal = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/chat/group`,
+        `https://vectalkbackend.onrender.com/api/v1/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
@@ -87,7 +87,7 @@ const GroupModal = ({ children }) => {
         },
       };
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/user?search=${search}`,
+        `https://vectalkbackend.onrender.com/api/v1/user?search=${search}`,
         config
       );
       // console.log(data);

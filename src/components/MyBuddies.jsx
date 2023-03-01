@@ -22,7 +22,7 @@ const MyBuddies = ({ fetchAgain, setFetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/chat`,
+        `https://vectalkbackend.onrender.com/api/v1/chat`,
         config
       );
       setChats(data);
